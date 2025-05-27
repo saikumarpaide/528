@@ -1,0 +1,6 @@
+ curl -X POST http://localhost:7007/api/template-validator/validate \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer guest" \
+  -d '{
+    "yamlContent": "apiVersion: backstage.io/v1alpha1\nkind: Component\nmetadata:\n  name: webhook-test\n  description: Test webhook\n  tags:\n    - development\n  annotations:\n    github.com/project-slug: myorg/webhook-test\n    backstage.io/source-location: url:https://github.com/backstage/backstage/tree/master\n  type: service\n  owner: team-a\n  lifecycle: development\n"
+  }'
