@@ -23,7 +23,7 @@ backend.add(import('@backstage/plugin-auth-backend-module-guest-provider'));
 // See https://backstage.io/docs/auth/guest/provider
 
 // catalog plugin
-backend.add(import('@backstage/plugin-catalog-backend'));
+//backend.add(import('@backstage/plugin-catalog-backend'));
 backend.add(
   import('@backstage/plugin-catalog-backend-module-scaffolder-entity-model'),
 );
@@ -51,5 +51,12 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
 
 // kubernetes
 backend.add(import('@backstage/plugin-kubernetes-backend'));
+
+backend.add(import('@internal/plugin-template-validator-backend'));
+backend.add(import('@internal/plugin-catalog-validation-watcher-backend'));
+
+// Add catalog plugin with event publishing
+backend.add(import('@backstage/plugin-catalog-backend'));
+backend.add(import('@backstage/plugin-events-backend'));
 
 backend.start();
