@@ -12,9 +12,7 @@ backend:
   # auth:
   #   keys:
   #     - secret: ${BACKEND_SECRET}
-  baseUrl: http://localhost:7008
-  listen:
-    port: 7008
+
 
   baseUrl: http://localhost:7007
   listen:
